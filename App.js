@@ -1,7 +1,7 @@
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import React, { useState } from 'react';
 
-import Color from './constants/colors';
+import Color from './constants/color';
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 
