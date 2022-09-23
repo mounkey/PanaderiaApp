@@ -1,7 +1,28 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
 
-export default function App() {
+import Color from './constants/colors';
+import { StatusBar } from 'expo-status-bar';
+import { useFonts } from 'expo-font';
+
+const App= () => {
+
+  //Funciones
+  const [loaded] = useFonts({
+    'Lato-Regular': require('./assets/fonts/Lato-Regular.ttf'),
+    'Lato-Bold': require('./assets/fonts/Lato-Bold.ttf'),
+    'Lato-Light': require('./assets/fonts/Lato-Light.ttf'),
+    });
+  
+
+  if (loaded){
+    return(
+      <View style={styles.container}>
+        <ActivityIndicator size="large" color={Color.letter} />
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <Text>Open up App.js to start working on your app!</Text>
@@ -18,3 +39,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App;
