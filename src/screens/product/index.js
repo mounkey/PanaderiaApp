@@ -15,4 +15,4 @@ const Product = ({ navigation }) => {
     )
 };
 
-export default Categories;
+export default Product;

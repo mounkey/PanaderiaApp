@@ -9,10 +9,11 @@ const Products= ({ navigation }) => {
             <Text style={styles.title}>Products</Text>
             <Button 
                 title="Go to Products"
-                onPress={() => navigation.navigate("Products")}
+                onPress={() => navigation.navigate("Product")}
+                
             />
         </View>
     )
 };
 
-export default Categories;
+export default Products;
